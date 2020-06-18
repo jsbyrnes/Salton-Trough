@@ -1,0 +1,11 @@
+MEX {
+	global:
+		mexFunction;
+		emlrtMexFcnProperties;
+		GaussianInterpolation_mex;
+		GaussianInterpolation_mex_initialize;
+		GaussianInterpolation_mex_terminate;
+		GaussianInterpolation_mex_atexit;
+	local:
+		*;
+};

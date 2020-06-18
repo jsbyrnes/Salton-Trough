@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -avr --delete /cygdrive/c/Research/tstar/TDTomography/ jsbyrnes@login.msi.umn.edu:/home/bezadam/jsbyrnes/TD3D/

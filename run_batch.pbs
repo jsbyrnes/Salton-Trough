@@ -1,0 +1,12 @@
+##Argumen list: number of jobs, script name, dataname, inv name
+#!/bin/bash -l
+#PBS -l walltime=96:00:00,nodes=1:ppn=12
+#PBS -m abe
+#PBS -M jsbyrnes@umn.edu
+#PBS -N Batch_STdata3C
+
+module load matlab
+
+cd /home/bezadam/jsbyrnes/TD3D/
+
+matlab -r "iter = 8; scriptname = 'TD_inversion_big'; name = 'ST_data3'; nameappend = 'C'; MakeDistributions"

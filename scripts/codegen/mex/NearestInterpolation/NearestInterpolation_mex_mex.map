@@ -1,0 +1,14 @@
+MEX {
+	global:
+		mexFunction;
+		emlrtMexFcnProperties;
+		NearestInterpolation;
+		emxEnsureCapacity;
+		emxFree_real_T;
+		emxInit_real_T;
+		NearestInterpolation_initialize;
+		NearestInterpolation_terminate;
+		NearestInterpolation_atexit;
+	local:
+		*;
+};
