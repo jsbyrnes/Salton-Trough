@@ -22,7 +22,7 @@ for k = 1:iter
 
         fid = fopen('run_data_batch.pbs', 'w');
 
-        fprintf(fid, '#PBS -l walltime=96:00:00,nodes=1:ppn=12\n');
+        fprintf(fid, '#PBS -l walltime=96:00:00,nodes=1:ppn=24\n');
         fprintf(fid, '#PBS -m n\n');
         fprintf(fid, '#PBS -M jsbyrnes@umn.edu\n');
         fprintf(fid, [ '#PBS -N ' name nameappend '\n' ]);

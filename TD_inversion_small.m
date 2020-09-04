@@ -8,8 +8,8 @@ TD_parameters = define_TDstructure( );
 
 if ~exist([ './Data/' name '.mat'], 'file')
 
-    dataStruct = load_data_SaltonTrough3D_3Dsynthetic6(TD_parameters);
-    %dataStruct = load_data_SaltonTrough3D(TD_parameters);
+    %dataStruct = load_data_SaltonTrough3D_3Dsynthetic6(TD_parameters);
+    dataStruct = load_data_SaltonTrough3D(TD_parameters);
     %dataStruct = load_data_MAGIC3D(TD_parameters);
     save(name, 'dataStruct');
     
@@ -23,7 +23,7 @@ dataStruct.yVec = 0;
 
 TD_parameters.max_sig        = 0.1;%on t*
 
-TD_parameters.interp_style   = 'nearest';%nearest, linear, or natural
+TD_parameters.interp_style   = 'nearest';%nearest, linear, or natural. Nearest works fine. 
 
 %rng(10)%make noise same for all chains
 %dataStruct.dtS       = normrnd(dataStruct.dtS, 0.003);
@@ -35,19 +35,19 @@ TD_parameters.interp_style   = 'nearest';%nearest, linear, or natural
 
 TD_parameters.debug_prior = 0;
 
-TD_parameters.individual_noise = 0.003;
+TD_parameters.individual_noise = 0;
 
-p = parpool;
+%p = parpool;
 
 %occasionally, you get runs only have one worker. This cloggs the
 %whole process
-if p.NumWorkers == 1
-
-    error('Problem starting parallel pool');
+% if p.NumWorkers == 1
+% 
+%     error('Problem starting parallel pool');
+%     
+% end
     
-end
-    
-parfor k = 1:TD_parameters.n_chains
+for k = 1:TD_parameters.n_chains
 
     warning off MATLAB:scatteredInterpolant:DupPtsAvValuesWarnId
     warning off MATLAB:scatteredInterpolant:TooFewPtsInterpWarnId

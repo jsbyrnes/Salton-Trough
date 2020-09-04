@@ -2,7 +2,7 @@
 clear, close all
 clc
 
-load('./Data/ST_data4.mat');
+load('./Data/ST_data3.mat');
 figure(1)
 subplot(211)
 hold on

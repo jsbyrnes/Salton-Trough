@@ -3,9 +3,9 @@ clear
 close all
 clc
 
-load('ST_data3ADistribution.mat')
+load('ST_syn6TestSeptDistribution.mat')
 
-contours_map = [ -10 30];
+contours_map = [ -2.5 2.5 ];
 depth_slice  = [ 5 120 ];
 
 xlimits = [-200 200];
@@ -15,11 +15,11 @@ mask_thresh = 20;
 mask_grid   = 15;%in kn
 
 load('CMfine.mat')
-%cmap = cm;
-cmap = flipud(pink);
+cmap = cm;
+%cmap = flipud(pink);
 
 %% 
-m    = model_median;
+m    = model_mean;
 
 %m = median(interp_models_coupled, 2);
 m = reshape(m, size(X));
@@ -27,8 +27,9 @@ m = reshape(m, size(X));
 m(m > max(contours_map)) = max(contours_map);
 m(m < min(contours_map)) = min(contours_map);
 
-v = linspace(0, sqrt(range(contours_map)), 15).^2 + contours_map(1);
+%v = linspace(0, sqrt(range(contours_map)), 15).^2 + contours_map(1);
 %v = linspace(0, sqrt(range(contours_map)), 10).^2 + contours_map(1);
+v = linspace(contours_map(1), contours_map(2), 10);
 
 %%
 [Xmask, Zmask] = meshgrid( min(dataStruct.xVec):mask_grid:max(dataStruct.xVec), ...
