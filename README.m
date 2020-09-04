@@ -29,7 +29,7 @@
 
 %     dataStruct.dataE   event index
 
-%     dataStruct.xVec    meshgrid results that define the imaging domain
+%     dataStruct.xVec    vectors that define the imaging domain
 %     dataStruct.yVec    
 %     dataStruct.zVec    
 
