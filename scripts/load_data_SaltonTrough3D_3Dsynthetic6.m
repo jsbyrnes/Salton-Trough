@@ -13,7 +13,7 @@ function [ dataStruct ] = load_data_SaltonTrough3D_3Dsynthetic6( TD_parameters )
     %fnames = dir('./tSMeasurements/tS-*');
 
     %dir                      = 'C:\Research\tstar\SaltonTrough\SaltonTrough\CalTech_firstpass\'; 
-    dir_ssip                 = 'C:\Research\tstar\SaltonTrough\SaltonTrough\Post2pifix_measurements\';
+    datadir                  = '.\Post2pifix_measurements\*_1.5Hz_result.mat';
     QC                       = 1;
     fnames                   = { '004', '006', '011', '020', '028', '030', '046', '048' };
     eventind                 = [ 4 6 11 20 28 30 46 48 ];
@@ -21,7 +21,7 @@ function [ dataStruct ] = load_data_SaltonTrough3D_3Dsynthetic6( TD_parameters )
     ssip_aswell              = 1;
     pert_ssip                = 0.0;
 
-    load('C:\Research\tstar\SaltonTrough\SaltonTrough\SSIP_data\SSIP.mat');
+    load('.\Post2pifix_measurements\SSIP.mat');
         
     for k=1:length(fnames)
 
@@ -272,7 +272,7 @@ function [ dataStruct ] = load_data_SaltonTrough3D_3Dsynthetic6( TD_parameters )
         
     end
         
-    load('C:\Research\tstar\SaltonTrough\SaltonTrough\Barak_Lekic_models\LAB_depths.mat');
+    load('.\Barak_Lekic_models\LAB_depths.mat');
     GLON = LON;
     GLAT = LAT;
     clear LON LAT

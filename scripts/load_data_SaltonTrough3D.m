@@ -134,7 +134,7 @@ function [ dataStruct ] = load_data_SaltonTrough3D( TD_parameters )
     
     vp(isnan(vp)) = interp1(zVec(~isnan(vp)), vp(~isnan(vp)), zVec(isnan(vp)), 'nearest', 'extrap');
     
-    load('C:\Research\tstar\SaltonTrough\SaltonTrough\Barak_Lekic_models\LAB_depths.mat');
+    load('.\Barak_Lekic_models\LAB_depths.mat');
     GLON = LON;
     GLAT = LAT;
     clear LON LAT
