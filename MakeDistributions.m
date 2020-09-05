@@ -191,6 +191,8 @@ end
 
 model_mode = reshape(model_mode, size(X));
 
+clear interp_models
+
 save([ name nameappend 'Distribution' ], '-v7.3')
 
 % for i = 1:numel(X)

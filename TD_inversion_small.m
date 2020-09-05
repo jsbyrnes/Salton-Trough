@@ -35,8 +35,6 @@ TD_parameters.interp_style   = 'nearest';%nearest, linear, or natural. Nearest w
 
 TD_parameters.debug_prior = 0;
 
-TD_parameters.individual_noise = 0;
-
 %p = parpool;
 
 %occasionally, you get runs only have one worker. This cloggs the

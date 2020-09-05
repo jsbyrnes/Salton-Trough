@@ -3,18 +3,6 @@ function [ model_hist ] = TD_inversion_function(TD_parameters, dataStruct, chain
     %This line is needed to make sure that the chains are different from
     %one another
     rng(chain*round(mod(now*1e12,1e3)))%seed down to less than the milisecond
-
-    if TD_parameters.individual_noise
-       
-        dataStruct.dtS = normrnd(dataStruct.dtS, TD_parameters.individual_noise);
-        
-        for k = 1:length(unique(dataStruct.dataE))
-               
-           dataStruct.dtS(dataStruct.dataE==k) = dataStruct.dtS(dataStruct.dataE==k) - mean(dataStruct.dtS(dataStruct.dataE==k));
-               
-        end
-        
-    end
     
     %convert the jump sigmas to real numbers instead of percentages
     TD_parameters.sig_zeta = TD_parameters.zeta_scale*TD_parameters.sig/100;

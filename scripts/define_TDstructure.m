@@ -2,7 +2,7 @@ function [ TD_parameters ] = define_TDstructure( )
 
     %%%%%%%search parameters
     TD_parameters.sig            = 10;%in percent of scales for all parameters.
-    TD_parameters.zeta_scale     = 3;%std of the prior for Normal. +/- bounds for uniform. 
+    TD_parameters.zeta_scale     = 30;%std of the prior for Normal. +/- bounds for uniform. 
     TD_parameters.max_cells      = 50;%don't go over 100
     TD_parameters.min_cells      = 5;%minimum for a box shaped anomaly
     TD_parameters.max_sig        = 0.03;%on t*
@@ -17,7 +17,7 @@ function [ TD_parameters ] = define_TDstructure( )
     TD_parameters.keep_each      = 2.5e3;%how often to save a model post burnin
     TD_parameters.print_each     = 1e5;%how often to print to the screen if you are impatient and chekcing it (like I do)
     
-    TD_parameters.max_depth      = 200;%in km
+    TD_parameters.max_depth      = 300;%in km
     TD_parameters.min_depth      = 0;%in km, should just be zero
     TD_parameters.rotation       = 20;%used to rotate the grid. Helpful when using linear arrays so everthing is on one axis
     TD_parameters.ZnodeSpacing   = 5;%in km, how often in the z-direction do you grid the ray paths

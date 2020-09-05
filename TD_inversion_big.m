@@ -20,17 +20,16 @@ else
 end
 %% Let's invert
 dataStruct.yVec           = 0;
-TD_parameters.zeta_scale  = 30;
 
-% rng(25)%make noise same for all chains
-% dataStruct.dtS       = normrnd(dataStruct.dtS, 0.003);
-% for k = 1:length(unique(dataStruct.dataE))
-% 
-%     dataStruct.dtS(dataStruct.dataE==k) = dataStruct.dtS(dataStruct.dataE==k) - mean(dataStruct.dtS(dataStruct.dataE==k));
-% 
-% end
+rng(25)%make noise same for all chains
+dataStruct.dtS       = normrnd(dataStruct.dtS, 0.1);
+for k = 1:length(unique(dataStruct.dataE))
 
-p = parpool;
+    dataStruct.dtS(dataStruct.dataE==k) = dataStruct.dtS(dataStruct.dataE==k) - mean(dataStruct.dtS(dataStruct.dataE==k));
+
+end
+
+p = parpool(24);
 
 %occasionally, you get runs only have one worker. This cloggs the
 %whole process

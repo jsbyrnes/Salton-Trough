@@ -10,7 +10,7 @@ function [ dataStruct ] = load_data_SaltonTrough3D( TD_parameters )
     allSta    = {};
 
     datadir                  = '.\Post2pifix_measurements\*_1.5Hz_result.mat';
-    QC                       = 1;
+    QC                       = 0;
     fnames                   = { '004', '006', '011', '020', '028', '030', '046', '048' };
     eventind                 = [ 4 6 11 20 28 30 46 48 ];
     stations_to_remove       = { 'MLAC' 'SNCC' 'SCI2' 'PDM' 'B01' 'M02' 'S01' 'N01'};

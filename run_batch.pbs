@@ -3,10 +3,10 @@
 #PBS -l walltime=96:00:00,nodes=1:ppn=24
 #PBS -m abe
 #PBS -M jsbyrnes@umn.edu
-#PBS -N Batch_STtest
+#PBS -N ST_syn_tri75km
 
 module load matlab
 
 cd /home/bezadam/jsbyrnes/TD3D/
 
-matlab -r "iter = 4; scriptname = 'Demonstration_script'; name = 'ST_syn6'; nameappend = 'TestSept'; MakeDistributions"
+matlab -r "iter = 4; scriptname = 'TD_inversion_big'; name = 'ST_syn_tri75km'; nameappend = ''; MakeDistributions"
