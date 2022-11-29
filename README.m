@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%
 %Read me script
 %This package contains all the scripts for reproducing the figures from
-%Byrnes and Bezada, JGR (in revision). 
+%Byrnes and Bezada, 2020 in JGR.
 
 %The current work flow is to run through qsub with the run_batch.pbs script
 %Run batch submits several jobs of 24 workers, each which call the
