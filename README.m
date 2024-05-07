@@ -71,6 +71,6 @@
 %or if you are in debug mode while a particular model is running. 
 
 %Please contact Joseph Byrnes at byrnes.joseph@gmail.com or
-%jsbyrnes@umn.edu for help building dataStruct, or anything else.
+%jsbyrnes@umn.edu (now joseph.byrnes@nau.edu) for help building dataStruct, or anything else.
 
 
